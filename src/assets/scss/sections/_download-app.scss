@@ -1,0 +1,126 @@
+.download-app {
+  padding: 30px 0 60px;
+  margin: 30px 0;
+  background: linear-gradient(100deg, $green, $blue, $green, $blue);
+  background-size: 400% 400%;
+  animation: gradient-color 60s ease infinite;
+  .box-img {
+    img {
+      width: 120%;
+      transform: translateX(60px) translateY(10px);
+      @include media-max(1200) {
+        width: 130%;
+        transform: translateX(100px) translateY(10px);
+      }
+      @include media-max(992) {
+        width: 140%;
+        transform: translateX(110px) translateY(65px);
+      }
+      @include media-max(768) {
+        width: 100%;
+        transform: translateX(30px) translateY(5px);
+      }
+      @include media-max(576) {
+        width: 100%;
+        transform: translateX(0) translateY(5px);
+      }
+    }
+  }
+  .box-content {
+    margin-top: 40px;
+    h4 {
+      color: #fff;
+      text-align: right;
+      font-size: 19px;
+      line-height: 1.8;
+      margin-bottom: 10px;
+      @include media-max(768) {
+        font-size: 18px;
+      }
+      @include media-max(576) {
+        font-size: 17px;
+      }
+    }
+    p {
+      color: #fff;
+      text-align: right;
+      font-size: 14px;
+      line-height: 1.8;
+      @include media-max(768) {
+        font-size: 13px;
+      }
+    }
+    a {
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+      border: 1px solid #fff;
+      padding: 20px 50px 12px;
+      margin: 5px 8px;
+      border-radius: 10px;
+      transition: 0.2 ease-in-out;
+      @include media-max(1200) {
+        padding: 15px 20px 8px;
+      }
+      &:hover {
+        background-color: $green;
+      }
+      &:first-of-type span::after {
+        content: "Available on the";
+        position: absolute;
+        color: #fff;
+        font-size: 10px;
+        top: -6px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        display: block;
+      }
+      &:last-of-type span::after {
+        content: "ANDROID APP ON";
+        position: absolute;
+        color: #fff;
+        font-size: 10px;
+        top: -6px;
+        left: 46%;
+        transform: translateX(-50%);
+        width: 100px;
+        display: block;
+      }
+      img {
+        width: 18px;
+        margin-right: 3px;
+      }
+      span {
+        position: relative;
+      }
+    }
+    p:last-of-type {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 13px;
+      @include media-max(768) {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+// Animation BG
+@keyframes gradient-color {
+  0% {
+    background-position: 0% 25%;
+  }
+  25% {
+    background-position: 50% 25%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

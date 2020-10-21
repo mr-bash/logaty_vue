@@ -1,0 +1,213 @@
+.show-lang {
+  .breadcrumb {
+    background: url("../../assets/img/gym-cover.png");
+    background-position: center center;
+  }
+  .selectors-lang {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 70px;
+    .box-select {
+      display: inline-block;
+      width: 160px;
+      height: 90px;
+      margin: 0 5px;
+      @include opc(45deg, $green, $blue);
+      text-align: center;
+      cursor: pointer;
+      box-shadow: 0px 1px 8px -3px transparent;
+      transition: 0.2s ease-in-out;
+      &:hover {
+        box-shadow: 0px 1px 8px -3px #878080;
+        background: #fff;
+      }
+      &:hover h6 {
+        color: $black;
+      }
+      h6 {
+        line-height: 90px;
+        color: #fff;
+        font-size: 14px;
+        @include media-max(576) {
+          line-height: 70px;
+          font-size: 13px;
+        }
+      }
+      @include media-max(576) {
+        width: 130px;
+        height: 70px;
+      }
+    }
+    .active {
+      box-shadow: 0px 1px 8px -3px #878080;
+      background: #fff;
+      h6 {
+        color: $black;
+      }
+    }
+  }
+  .content {
+    margin: 20px 0 50px;
+    .table-lang {
+      text-align: center;
+      margin-bottom: 50px;
+      @include media-max(768) {
+        margin: 25px 0;
+      }
+      h6 {
+        text-align: center;
+        margin-bottom: 20px;
+        display: inline-block;
+        padding: 6px 12px;
+        background-color: $green;
+        color: #fff;
+        border-radius: 10px;
+      }
+      ul {
+        list-style: none;
+        li {
+          padding: 0 5px;
+          height: 40px;
+          margin: 5px 0;
+          text-align: center;
+          position: relative;
+          &:nth-of-type(odd) {
+            background-color: #f4f4f4;
+          }
+          span {
+            line-height: 40px;
+            display: inline-block;
+            &:last-of-type {
+              // border-right: 5px solid #FFF;
+              direction: ltr;
+            }
+          }
+          img {
+            position: absolute;
+            left: -23px;
+            top: 0px;
+            background: #fff;
+            padding: 14px 5px;
+            height: 100%;
+            box-shadow: -3px 0px 12px -9px #000;
+            cursor: pointer;
+            @include media-max(576) {
+              left: -5px;
+            }
+          }
+        }
+        .co1 {
+          border-left: 2px solid #fff;
+        }
+        .co2 {
+          border-right: 2px solid #fff;
+        }
+      }
+      .tabel-words {
+        margin-right: 10px;
+        margin-left: 10px;
+      }
+    }
+  }
+  .content-phrases {
+    ul {
+      li {
+        @include media-max(768) {
+          height: 110px !important;
+        }
+        span {
+          @include media-max(768) {
+            padding: 36px 5px;
+            line-height: unset !important;
+          }
+        }
+        img {
+          @include media-max(768) {
+            padding: 48px 5px !important;
+          }
+        }
+      }
+    }
+  }
+  .talks-langs {
+    .content-talks {
+      direction: ltr;
+      box-shadow: 0px 3px 4px -2px #6c6969;
+      padding: 30px 90px;
+      @include media-max(768) {
+        padding: 10px 60px;
+      }
+      h6 {
+        text-align: center;
+        margin: 20px auto;
+        display: block;
+        padding: 10px 12px;
+        background-color: #38d69a;
+        color: #fff;
+        border-radius: 10px;
+        width: 200px;
+      }
+      .table-lang {
+        box-shadow: 0px 0px 4px -2px #6c6969;
+        position: relative;
+        img.img-profile {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 75px;
+          @include media-max(768) {
+            width: 45px;
+          }
+        }
+        .talk {
+          padding: 10px 50px;
+          position: relative;
+          .box-icon {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 30px;
+            box-shadow: -3px 0px 12px -9px #000;
+            display: block;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            cursor: pointer;
+          }
+          p {
+            margin: 10px 0;
+            &:first-of-type {
+              text-align: left;
+            }
+            &:last-of-type {
+              text-align: right;
+            }
+          }
+          hr {
+          }
+        }
+      }
+    }
+  }
+  .style-box:nth-of-type(odd) .img-profile {
+    right: unset;
+    left: -83px;
+    @include media-max(768) {
+      left: -56px;
+    }
+  }
+  .style-box:nth-of-type(even) .img-profile {
+    left: unset;
+    right: -83px;
+    @include media-max(768) {
+      right: -56px;
+    }
+  }
+  .style-box:nth-of-type(even) .table-lang {
+    background-color: #f4f4f4;
+  }
+}

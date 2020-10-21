@@ -1,0 +1,27 @@
+// Mixin Global
+@mixin btn($bgColor, $fontColor) {
+  background-color: $bgColor;
+  color: $fontColor;
+  display: inline-block;
+  padding: 7px 20px;
+  border: 1px solid transparent;
+  border-radius: 18px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+@mixin opc($dir, $color1, $color2) {
+  background: linear-gradient($dir, $color1, $color2);
+}
+
+@mixin media-max($width) {
+  @media (max-width: #{$width}px) {
+    @content;
+  }
+}
+
+@mixin media-min($width) {
+  @media (min-width: #{$width}px) {
+    @content;
+  }
+}

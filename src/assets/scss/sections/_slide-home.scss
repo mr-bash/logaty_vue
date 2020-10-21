@@ -1,0 +1,147 @@
+.slide-home {
+  background: linear-gradient(100deg, $green, $blue, $green, $blue);
+  background-size: 400% 400%;
+  animation: gradient-color 60s ease infinite;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  @include media-max(768) {
+    height: 90vh;
+  }
+  .box-content {
+    position: absolute;
+    top: 55%;
+    right: 0;
+    transform: translateY(-50%);
+    text-align: right;
+    @include media-max(768) {
+      transform: translateY(0);
+      top: 100px;
+    }
+    h1 {
+      color: #fff;
+      letter-spacing: 2px;
+      position: relative;
+      font-size: 28px;
+      @include media-max(992) {
+        font-size: 26px;
+      }
+      @include media-max(768) {
+        font-size: 24px;
+        margin-right: 50px;
+      }
+      @include media-max(576) {
+        letter-spacing: 1px;
+      }
+      p {
+        position: absolute;
+        left: 45px;
+        top: 40px;
+        @include media-max(992) {
+          left: 40px;
+          top: 40px;
+        }
+        @include media-max(768) {
+          left: 80px;
+          top: 35px;
+        }
+        @include media-max(576) {
+          left: 50px;
+        }
+        span {
+          background-color: $green;
+          padding: 4px 6px 8px;
+          display: inline-block;
+        }
+      }
+    }
+    .content-title {
+      transform: translateY(40px);
+      p {
+        color: #fff;
+        line-height: 1.9;
+        text-align: right;
+        @include media-max(992) {
+          font-size: 15px;
+        }
+        @include media-max(768) {
+          font-size: 16px;
+          width: 100%;
+        }
+        @include media-max(576) {
+          font-size: 14px;
+          width: 95%;
+          margin: 15px auto;
+        }
+      }
+      a {
+        @include btn(#fff, $blue);
+        display: block;
+        width: 120px;
+        margin: 0 auto;
+        text-align: center;
+        transition: 0.1s ease-in-out;
+        @include media-max(768) {
+          width: 90px;
+          font-size: 14px;
+          margin: 20px auto 0;
+        }
+        &:hover {
+          background-color: $blue;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .box-img {
+    position: relative;
+    @include media-max(768) {
+      display: none;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      right: 30px;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: url("../../assets/img/words-bg.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: left center;
+      z-index: 1;
+      top: 10px;
+      @include media-max(992) {
+        display: none;
+      }
+    }
+    img {
+      width: 410px;
+      transform: translateY(25px);
+      position: relative;
+      z-index: 2;
+      @include media-max(992) {
+        width: 370px;
+      }
+    }
+  }
+}
+
+// Animation BG
+@keyframes gradient-color {
+  0% {
+    background-position: 0% 25%;
+  }
+  25% {
+    background-position: 50% 25%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
